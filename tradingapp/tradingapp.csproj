@@ -67,6 +67,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -77,6 +78,42 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\kite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\trading_view.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\nse_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\investing-com-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\investing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\ET.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\MONEY_CONTROL_LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\bloomberglp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\reuters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\pivot_trading2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\pivot_trading.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
