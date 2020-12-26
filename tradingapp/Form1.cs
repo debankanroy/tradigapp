@@ -48,6 +48,11 @@ namespace tradingapp
         //{
             //return !_regex.IsMatch(text);
         //}
+        private void validate_tb_data(TextBox tb)
+        {
+            if (tb.Text == ".")
+                tb.Text = "0.";
+        }
 
         private void calculate_Risked_amt()
         {
@@ -137,6 +142,7 @@ namespace tradingapp
 
         private void tb_acct_val_TextChanged(object sender, EventArgs e)
         {
+            validate_tb_data(tb_acct_val);
             calculate_Risked_amt();
         }
 
@@ -147,6 +153,7 @@ namespace tradingapp
 
         private void tb_risk_percent_TextChanged(object sender, EventArgs e)
         {
+            validate_tb_data(tb_risk_percent);
             calculate_Risked_amt();
         }
 
@@ -165,16 +172,19 @@ namespace tradingapp
 
         private void tb_share_price_TextChanged(object sender, EventArgs e)
         {
+            validate_tb_data(tb_share_price);
             calculate_Lev_mult();
         }
 
         private void tb_lev_price_TextChanged(object sender, EventArgs e)
         {
+            validate_tb_data(tb_lev_price);
             calculate_Lev_mult();
         }
 
         private void tb_sl_TextChanged(object sender, EventArgs e)
         {
+            validate_tb_data(tb_sl);
             calculate_share_qty();
         }
 
