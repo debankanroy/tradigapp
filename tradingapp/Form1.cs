@@ -266,7 +266,7 @@ namespace tradingapp
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
 
-                openFileDialog.InitialDirectory = "c:\\";
+                //openFileDialog.InitialDirectory = "c:\\"; /*Opening Default directory, usually the last used one. This will increase the user convenience*/
                 openFileDialog.Filter = "csv files (*.csv)|*.csv";
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;
@@ -291,9 +291,9 @@ namespace tradingapp
             var filePath = string.Empty;
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            
 
-                saveFileDialog.InitialDirectory = "c:\\";
+
+            //saveFileDialog.InitialDirectory = "c:\\";/*Opening Default directory, usually the last used one. This will increase the user convenience*/
                 saveFileDialog.Filter = "csv files (*.csv)|*.csv";
                 saveFileDialog.FilterIndex = 2;
                 saveFileDialog.RestoreDirectory  = true;
