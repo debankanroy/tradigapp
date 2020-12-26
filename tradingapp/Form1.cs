@@ -32,6 +32,7 @@ namespace tradingapp
             dt.Columns.Add("Risk Amt");
 
             dataGridView1.DataSource = dt;
+            
         }
         public Form1()
         {
@@ -43,11 +44,7 @@ namespace tradingapp
         {
 
         }
-       // private static readonly Regex _regex = new Regex("[^0-9.-]+"); //regex that matches disallowed text
-        //private static bool IsTextAllowed(string text)
-        //{
-            //return !_regex.IsMatch(text);
-        //}
+
         private void validate_tb_data(TextBox tb)
         {
             if (tb.Text == ".")
@@ -231,23 +228,6 @@ namespace tradingapp
 
         private void button_add_entry_Click(object sender, EventArgs e)
         {
-            //dataGridView1.r
-            /* 
-            dt.Columns.Add("Name");
-            dt.Columns.Add("Price");
-            dt.Columns.Add("Lev Price");
-            dt.Columns.Add("Lev Mult");
-            dt.Columns.Add("SL");
-            dt.Columns.Add("QTY");
-            dt.Columns.Add("Trade Amt");
-            dt.Columns.Add("Manual Amt");
-            dt.Columns.Add("Tot price");
-            dt.Columns.Add("Tot price %");
-            dt.Columns.Add("Acct Value");
-            dt.Columns.Add("Risk");
-            dt.Columns.Add("Risk Amt");
-             
-             */
             var row = dt.NewRow();
 
             row["Name"] = tb_share_name.Text == "" ? "NA" : tb_share_name.Text;
@@ -284,14 +264,6 @@ namespace tradingapp
                 {
                     //Get the path of specified file
                     filePath = openFileDialog.FileName;
-
-                    //Read the contents of the file into a stream
-                    //var fileStream = openFileDialog.OpenFile();
-
-                    //using (StreamReader reader = new StreamReader(fileStream))
-                    //{
-                        //fileContent = reader.ReadToEnd();
-                    //}
                 }
             }
             if (filePath == "")
@@ -330,11 +302,7 @@ namespace tradingapp
 
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-            //MessageBox.Show(fileContent, "File Content at path: " + filePath, MessageBoxButtons.OK);
-
+        {       
 
             StringBuilder sb = new StringBuilder();
             string filePath;
@@ -392,8 +360,30 @@ namespace tradingapp
 
         private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //dataGridView1.Columns.
-            
+
+            var row = dataGridView1.SelectedRows[0];
+            tb_share_name.Text = row.Cells["Name"].Value.ToString();
+            tb_share_price.Text = row.Cells["Price"].Value.ToString();
+            tb_lev_price.Text = row.Cells["Lev Price"].Value.ToString();
+            tb_lev_mult.Text = row.Cells["Lev Mult"].Value.ToString();
+            tb_sl.Text = row.Cells["SL"].Value.ToString();
+            tb_sq.Text = row.Cells["QTY"].Value.ToString();
+            tb_trade_amt.Text = row.Cells["Trade Amt"].Value.ToString();
+            if (row.Cells["Manual Amt"].Value.ToString() != "NA")
+            {
+                tb_manual_invest.Text = row.Cells["Manual Amt"].Value.ToString();
+                cb_manual_invest.Checked = true;
+            }
+            else
+            {
+                tb_manual_invest.Text = "";
+                cb_manual_invest.Checked = false;
+            }
+            tb_total_price.Text = row.Cells["Tot price"].Value.ToString(); 
+            tb_acct_val.Text = row.Cells["Acct Value"].Value.ToString();
+            tb_risk_percent.Text = row.Cells["Risk %"].Value.ToString();
+            tb_risk_amt.Text = row.Cells["Risk Amt"].Value.ToString(); 
+
         }
 
         private void picture_kite_Click(object sender, EventArgs e)
@@ -445,5 +435,6 @@ namespace tradingapp
         {
             Process.Start(@"https://in.reuters.com/");
         }
+        
     }
 } 
