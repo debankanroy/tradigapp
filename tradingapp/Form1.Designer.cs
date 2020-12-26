@@ -69,6 +69,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picture_kite = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tb_date = new System.Windows.Forms.TextBox();
+            this.button_date = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -85,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 39);
+            this.label1.Location = new System.Drawing.Point(27, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 0;
@@ -93,7 +96,7 @@
             // 
             // tb_acct_val
             // 
-            this.tb_acct_val.Location = new System.Drawing.Point(109, 32);
+            this.tb_acct_val.Location = new System.Drawing.Point(110, 48);
             this.tb_acct_val.Name = "tb_acct_val";
             this.tb_acct_val.Size = new System.Drawing.Size(100, 20);
             this.tb_acct_val.TabIndex = 1;
@@ -104,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 75);
+            this.label2.Location = new System.Drawing.Point(27, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 2;
@@ -112,7 +115,7 @@
             // 
             // tb_risk_percent
             // 
-            this.tb_risk_percent.Location = new System.Drawing.Point(109, 72);
+            this.tb_risk_percent.Location = new System.Drawing.Point(110, 88);
             this.tb_risk_percent.Name = "tb_risk_percent";
             this.tb_risk_percent.Size = new System.Drawing.Size(52, 20);
             this.tb_risk_percent.TabIndex = 3;
@@ -123,7 +126,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(280, 35);
+            this.label3.Location = new System.Drawing.Point(281, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 4;
@@ -131,7 +134,7 @@
             // 
             // tb_risk_amt
             // 
-            this.tb_risk_amt.Location = new System.Drawing.Point(263, 68);
+            this.tb_risk_amt.Location = new System.Drawing.Point(264, 84);
             this.tb_risk_amt.Name = "tb_risk_amt";
             this.tb_risk_amt.ReadOnly = true;
             this.tb_risk_amt.Size = new System.Drawing.Size(100, 20);
@@ -141,7 +144,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 161);
+            this.label4.Location = new System.Drawing.Point(27, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 6;
@@ -149,7 +152,7 @@
             // 
             // tb_share_price
             // 
-            this.tb_share_price.Location = new System.Drawing.Point(109, 154);
+            this.tb_share_price.Location = new System.Drawing.Point(110, 170);
             this.tb_share_price.Name = "tb_share_price";
             this.tb_share_price.Size = new System.Drawing.Size(100, 20);
             this.tb_share_price.TabIndex = 7;
@@ -160,7 +163,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 242);
+            this.label5.Location = new System.Drawing.Point(27, 258);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 8;
@@ -168,7 +171,7 @@
             // 
             // tb_sl
             // 
-            this.tb_sl.Location = new System.Drawing.Point(109, 239);
+            this.tb_sl.Location = new System.Drawing.Point(110, 255);
             this.tb_sl.Name = "tb_sl";
             this.tb_sl.Size = new System.Drawing.Size(100, 20);
             this.tb_sl.TabIndex = 9;
@@ -178,7 +181,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 199);
+            this.label6.Location = new System.Drawing.Point(27, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 13);
             this.label6.TabIndex = 10;
@@ -186,7 +189,7 @@
             // 
             // tb_sq
             // 
-            this.tb_sq.Location = new System.Drawing.Point(109, 288);
+            this.tb_sq.Location = new System.Drawing.Point(110, 304);
             this.tb_sq.Name = "tb_sq";
             this.tb_sq.ReadOnly = true;
             this.tb_sq.Size = new System.Drawing.Size(100, 20);
@@ -194,7 +197,7 @@
             // 
             // tb_lev_price
             // 
-            this.tb_lev_price.Location = new System.Drawing.Point(109, 192);
+            this.tb_lev_price.Location = new System.Drawing.Point(110, 208);
             this.tb_lev_price.Name = "tb_lev_price";
             this.tb_lev_price.Size = new System.Drawing.Size(100, 20);
             this.tb_lev_price.TabIndex = 12;
@@ -205,7 +208,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(269, 150);
+            this.label7.Location = new System.Drawing.Point(270, 166);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 13;
@@ -213,7 +216,7 @@
             // 
             // tb_lev_mult
             // 
-            this.tb_lev_mult.Location = new System.Drawing.Point(277, 188);
+            this.tb_lev_mult.Location = new System.Drawing.Point(278, 204);
             this.tb_lev_mult.Name = "tb_lev_mult";
             this.tb_lev_mult.ReadOnly = true;
             this.tb_lev_mult.Size = new System.Drawing.Size(64, 20);
@@ -223,7 +226,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 291);
+            this.label8.Location = new System.Drawing.Point(27, 307);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 13);
             this.label8.TabIndex = 15;
@@ -241,7 +244,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(280, 264);
+            this.label10.Location = new System.Drawing.Point(281, 280);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 17;
@@ -249,7 +252,7 @@
             // 
             // tb_trade_amt
             // 
-            this.tb_trade_amt.Location = new System.Drawing.Point(263, 287);
+            this.tb_trade_amt.Location = new System.Drawing.Point(264, 303);
             this.tb_trade_amt.Name = "tb_trade_amt";
             this.tb_trade_amt.ReadOnly = true;
             this.tb_trade_amt.Size = new System.Drawing.Size(100, 20);
@@ -258,7 +261,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 391);
+            this.label11.Location = new System.Drawing.Point(27, 407);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 13);
             this.label11.TabIndex = 19;
@@ -266,7 +269,7 @@
             // 
             // tb_total_price
             // 
-            this.tb_total_price.Location = new System.Drawing.Point(110, 384);
+            this.tb_total_price.Location = new System.Drawing.Point(111, 400);
             this.tb_total_price.Name = "tb_total_price";
             this.tb_total_price.ReadOnly = true;
             this.tb_total_price.Size = new System.Drawing.Size(100, 20);
@@ -275,7 +278,7 @@
             // label_price_acc_percentage
             // 
             this.label_price_acc_percentage.AutoSize = true;
-            this.label_price_acc_percentage.Location = new System.Drawing.Point(216, 387);
+            this.label_price_acc_percentage.Location = new System.Drawing.Point(217, 403);
             this.label_price_acc_percentage.Name = "label_price_acc_percentage";
             this.label_price_acc_percentage.Size = new System.Drawing.Size(105, 13);
             this.label_price_acc_percentage.TabIndex = 21;
@@ -283,7 +286,7 @@
             // 
             // tb_manual_invest
             // 
-            this.tb_manual_invest.Location = new System.Drawing.Point(109, 340);
+            this.tb_manual_invest.Location = new System.Drawing.Point(110, 356);
             this.tb_manual_invest.Name = "tb_manual_invest";
             this.tb_manual_invest.ReadOnly = true;
             this.tb_manual_invest.Size = new System.Drawing.Size(100, 20);
@@ -295,7 +298,7 @@
             // cb_manual_invest
             // 
             this.cb_manual_invest.AutoSize = true;
-            this.cb_manual_invest.Location = new System.Drawing.Point(12, 342);
+            this.cb_manual_invest.Location = new System.Drawing.Point(13, 358);
             this.cb_manual_invest.Name = "cb_manual_invest";
             this.cb_manual_invest.Size = new System.Drawing.Size(93, 17);
             this.cb_manual_invest.TabIndex = 24;
@@ -314,7 +317,7 @@
             // 
             // button_add_entry
             // 
-            this.button_add_entry.Location = new System.Drawing.Point(49, 430);
+            this.button_add_entry.Location = new System.Drawing.Point(30, 442);
             this.button_add_entry.Name = "button_add_entry";
             this.button_add_entry.Size = new System.Drawing.Size(75, 23);
             this.button_add_entry.TabIndex = 26;
@@ -325,7 +328,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(26, 124);
+            this.label12.Location = new System.Drawing.Point(27, 140);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 13);
             this.label12.TabIndex = 27;
@@ -333,14 +336,14 @@
             // 
             // tb_share_name
             // 
-            this.tb_share_name.Location = new System.Drawing.Point(109, 121);
+            this.tb_share_name.Location = new System.Drawing.Point(110, 137);
             this.tb_share_name.Name = "tb_share_name";
             this.tb_share_name.Size = new System.Drawing.Size(100, 20);
             this.tb_share_name.TabIndex = 28;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(163, 430);
+            this.button1.Location = new System.Drawing.Point(144, 442);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 29;
@@ -350,7 +353,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(272, 430);
+            this.button2.Location = new System.Drawing.Point(253, 442);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 30;
@@ -458,12 +461,41 @@
             this.picture_kite.TabStop = false;
             this.picture_kite.Click += new System.EventHandler(this.picture_kite_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(27, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(30, 13);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "Date";
+            // 
+            // tb_date
+            // 
+            this.tb_date.Location = new System.Drawing.Point(110, 12);
+            this.tb_date.Name = "tb_date";
+            this.tb_date.Size = new System.Drawing.Size(100, 20);
+            this.tb_date.TabIndex = 42;
+            // 
+            // button_date
+            // 
+            this.button_date.Location = new System.Drawing.Point(220, 10);
+            this.button_date.Name = "button_date";
+            this.button_date.Size = new System.Drawing.Size(75, 23);
+            this.button_date.TabIndex = 43;
+            this.button_date.Text = "Reset date";
+            this.button_date.UseVisualStyleBackColor = true;
+            this.button_date.Click += new System.EventHandler(this.button_date_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1049, 630);
+            this.Controls.Add(this.button_date);
+            this.Controls.Add(this.tb_date);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -567,6 +599,9 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tb_date;
+        private System.Windows.Forms.Button button_date;
     }
 }
 

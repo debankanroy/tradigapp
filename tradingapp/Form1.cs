@@ -17,6 +17,8 @@ namespace tradingapp
         private void InitializeDatable()
         {
             dt = new DataTable();
+
+            dt.Columns.Add("Date");
             dt.Columns.Add("Name");
             dt.Columns.Add("Price");
             dt.Columns.Add("Lev Price");
@@ -34,16 +36,24 @@ namespace tradingapp
             dataGridView1.DataSource = dt;
             
         }
+        private void Initialize_Date()
+        {
+            DateTime today = DateTime.Today;
+            tb_date.Text = today.ToShortDateString();
+        }
+
         public Form1()
         {
             InitializeComponent();
             InitializeDatable();
+            Initialize_Date();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
 
         private void validate_tb_data(TextBox tb)
         {
@@ -230,6 +240,7 @@ namespace tradingapp
         {
             var row = dt.NewRow();
 
+            row["Date"] = tb_date.Text == "" ? "NA" : tb_date.Text;
             row["Name"] = tb_share_name.Text == "" ? "NA" : tb_share_name.Text;
             row["Price"] = tb_share_price.Text == "" ? "NA" :tb_share_price.Text;
             row["Lev Price"] = tb_lev_price.Text == "" ? "NA" :tb_share_price.Text;
@@ -362,6 +373,8 @@ namespace tradingapp
         {
 
             var row = dataGridView1.SelectedRows[0];
+
+            tb_date.Text = row.Cells["Date"].Value.ToString();
             tb_share_name.Text = row.Cells["Name"].Value.ToString();
             tb_share_price.Text = row.Cells["Price"].Value.ToString();
             tb_lev_price.Text = row.Cells["Lev Price"].Value.ToString();
@@ -434,6 +447,11 @@ namespace tradingapp
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             Process.Start(@"https://in.reuters.com/");
+        }
+
+        private void button_date_Click(object sender, EventArgs e)
+        {
+            Initialize_Date();
         }
         
     }
