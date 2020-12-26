@@ -118,6 +118,8 @@ namespace tradingapp
             }
             else
             {
+                if (tb_lev_price.Text == "" || tb_share_price.Text == "" || tb_sl.Text == "" || tb_risk_amt.Text == "" || tb_acct_val.Text == "")
+                    return;
                 tb_sq.Text = (float.Parse(tb_manual_invest.Text)  / float.Parse(tb_lev_price.Text)).ToString();
                 tb_trade_amt.Text = (float.Parse(tb_sq.Text) * float.Parse(tb_share_price.Text)).ToString();
                 tb_risk_amt.Text = (float.Parse(tb_sq.Text) * Math.Abs(float.Parse(tb_share_price.Text) - float.Parse(tb_sl.Text))).ToString();
@@ -190,12 +192,12 @@ namespace tradingapp
         {
             if (cb_manual_invest.Checked == true)
             {
-                //tb_risk_percent.ReadOnly = true;
+                tb_risk_percent.ReadOnly = true;
                 tb_manual_invest.ReadOnly = false;
             }
             else
             {
-                //tb_risk_percent.ReadOnly = false;
+                tb_risk_percent.ReadOnly = false;
                 tb_manual_invest.ReadOnly = true;
             }
         }
