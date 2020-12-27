@@ -243,7 +243,7 @@ namespace tradingapp
             row["Date"] = tb_date.Text == "" ? "NA" : tb_date.Text;
             row["Name"] = tb_share_name.Text == "" ? "NA" : tb_share_name.Text;
             row["Price"] = tb_share_price.Text == "" ? "NA" :tb_share_price.Text;
-            row["Lev Price"] = tb_lev_price.Text == "" ? "NA" :tb_share_price.Text;
+            row["Lev Price"] = tb_lev_price.Text == "" ? "NA" : tb_lev_price.Text;
             row["Lev Mult"] = tb_lev_mult.Text == "" ? "NA" :tb_lev_mult.Text;
             row["SL"] = tb_sl.Text == "" ? "NA" :tb_sl.Text;
             row["QTY"] = tb_sq.Text == "" ? "NA" :tb_sq.Text;
